@@ -1,0 +1,156 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-color);
+}
+
+.navbar-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px var(--container-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+}
+
+.navbar-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+    text-transform: uppercase;
+}
+
+.navbar-menu a:hover {
+    color: var(--text-primary);
+}
+
+.navbar-cta {
+    padding: 12px 28px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.navbar-cta:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(182, 255, 0, 0.3);
+}
+
+.speed-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 1px solid var(--line-color);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    user-select: none;
+}
+
+.speed-mode-toggle:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.speed-mode-toggle span {
+    font-size: 16px;
+    transition: color var(--transition-fast);
+}
+
+body.speed-mode .speed-mode-toggle {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+body.speed-mode .speed-mode-toggle span {
+    color: var(--accent);
+    animation: pulse 0.6s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+    
+    .navbar-container {
+        gap: 12px;
+    }
+    
+    .navbar-cta {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+    
+    .speed-mode-toggle {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 15px 20px;
+    }
+    
+    .navbar-logo {
+        font-size: 20px;
+    }
+    
+    .navbar-cta {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .speed-mode-toggle {
+        font-size: 9px;
+        padding: 6px 10px;
+    }
+    
+    .speed-mode-toggle span {
+        font-size: 12px;
+    }
+}
+

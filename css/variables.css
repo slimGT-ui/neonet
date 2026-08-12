@@ -1,0 +1,63 @@
+:root {
+    /* Colors */
+    --bg-primary: #050505;
+    --text-primary: #FFFFFF;
+    --text-secondary: #888888;
+    --accent: #B6FF00;
+    --accent-hover: #9AE000;
+    --line-color: rgba(255, 255, 255, 0.1);
+    
+    /* Typography */
+    --font-main: 'Space Grotesk', sans-serif;
+    
+    /* Font Sizes */
+    --fs-hero: clamp(60px, 12vw, 180px);
+    --fs-section: clamp(48px, 8vw, 120px);
+    --fs-large: clamp(32px, 4vw, 64px);
+    --fs-body: 18px;
+    --fs-small: 14px;
+    
+    /* Spacing */
+    --container-padding: clamp(20px, 5vw, 80px);
+    --section-gap: clamp(80px, 15vh, 200px);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+    --transition-slow: 0.6s ease;
+    
+    /* Speed Mode */
+    --speed-multiplier: 1;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Speed Mode Active */
+body.speed-mode {
+    --speed-multiplier: 0.3;
+}
+
+/* Utility Classes */
+.text-accent {
+    color: var(--accent);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

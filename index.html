@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEONET — Internet Without Waiting</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    
+    <div class="speed-test-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            
+            <div class="test-screen screen-ready active">
+                <h2 class="test-title">INTERNET SPEED TEST</h2>
+                <p class="test-subtitle">Ready?</p>
+                <button class="test-start-btn">START TEST</button>
+            </div>
+            
+            <div class="test-screen screen-testing">
+                <h2 class="test-title">TESTING</h2>
+                
+                <div class="test-metric">
+                    <div class="metric-label">PING</div>
+                    <div class="metric-value ping-value">-- ms</div>
+                </div>
+                
+                <div class="test-metric">
+                    <div class="metric-label">DOWNLOAD</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill download-progress"></div>
+                    </div>
+                    <div class="metric-value download-value">0 Mbps</div>
+                </div>
+                
+                <div class="test-metric">
+                    <div class="metric-label">UPLOAD</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill upload-progress"></div>
+                    </div>
+                    <div class="metric-value upload-value">0 Mbps</div>
+                </div>
+            </div>
+            
+            <div class="test-screen screen-results">
+                <div class="result-speed">942</div>
+                <div class="result-unit">Mbps</div>
+                <p class="result-message">Your connection is ridiculously fast.</p>
+                <button class="result-btn">VIEW PLANS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            
+            <div class="order-screen screen-step1 active">
+                <h2 class="order-title">GET CONNECTED</h2>
+                
+                <div class="selected-plan">
+                    <div class="plan-label">YOUR PLAN</div>
+                    <div class="plan-info">
+                        <span class="plan-name-display">BOOST</span>
+                        <span class="plan-price-display">€29/mo</span>
+                    </div>
+                </div>
+                
+                <form class="order-form">
+                    <div class="form-group">
+                        <label>NAME</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>EMAIL</label>
+                        <input type="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>ADDRESS</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    
+                    <button type="button" class="form-btn continue-btn">CONTINUE →</button>
+                </form>
+            </div>
+            
+            <div class="order-screen screen-step2">
+                <h2 class="order-title">HOW DO YOU WANT<br>TO CONNECT?</h2>
+                
+                <div class="connection-options">
+                    <div class="connection-option" data-type="installation">
+                        <div class="option-title">INSTALLATION</div>
+                        <div class="option-description">Free technician installation</div>
+                    </div>
+                    
+                    <div class="connection-option" data-type="self">
+                        <div class="option-title">SELF INSTALL</div>
+                        <div class="option-description">We'll ship everything to you</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-screen screen-step3">
+                <h2 class="order-title">YOU'RE IN.</h2>
+                
+                <div class="order-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">PLAN</span>
+                        <span class="summary-value plan-summary">BOOST</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">SPEED</span>
+                        <span class="summary-value speed-summary">700 Mbps</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">PRICE</span>
+                        <span class="summary-value price-summary">€29 / month</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">INSTALLATION</span>
+                        <span class="summary-value install-summary">FREE</span>
+                    </div>
+                </div>
+                
+                <button class="form-btn confirm-btn">CONFIRM ORDER</button>
+            </div>
+            
+            <div class="order-screen screen-final">
+                <div class="success-icon">✓</div>
+                <h2 class="order-title">WELCOME TO NEONET.</h2>
+                <p class="final-message">YOUR INTERNET<br>STARTS SOON.</p>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">NEONET</div>
+            <div class="navbar-menu">
+                <a href="#home">HOME</a>
+                <a href="#plans">PLANS</a>
+                <a href="#technology">TECHNOLOGY</a>
+                <a href="#support">SUPPORT</a>
+            </div>
+            <button class="navbar-cta">CHECK YOUR SPEED →</button>
+            <div class="speed-mode-toggle">
+                <span>◉</span> SPEED MODE
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="hero-line">YOU CLICK.</span>
+                    <span class="hero-line">WE DELIVER.</span>
+                </h1>
+                <p class="hero-subtitle">Internet without<br>the waiting.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">GET CONNECTED</button>
+                    <button class="btn-secondary">CHECK SPEED</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="speed-display">
+                    <div class="speed-number">942</div>
+                    <div class="speed-unit">Mbps</div>
+                    <div class="speed-ping">PING 4ms</div>
+                </div>
+                <div class="speed-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-section">
+        <div class="work-container">
+            <div class="work-left">
+                <h2 class="work-title fade-in">
+                    <span>INTERNET</span>
+                    <span>SHOULD</span>
+                    <span>JUST WORK.</span>
+                </h2>
+                <div class="work-description fade-in">
+                    <p>No buffering.</p>
+                    <p>No random disconnects.</p>
+                    <p>No excuses.</p>
+                </div>
+            </div>
+            <div class="work-right">
+                <svg class="signal-line" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <path class="line-path" d="M 0 150 L 100 150 L 120 100 L 140 100 L 160 200 L 180 200 L 200 150 L 300 150 L 320 100 L 340 100 L 360 150 L 400 150" 
+                          fill="none" 
+                          stroke="#B6FF00" 
+                          stroke-width="3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefit-card scale-in hover-lift">
+                <div class="benefit-number">01</div>
+                <div class="benefit-title">SPEED</div>
+                <div class="benefit-value">UP TO<br>1000 Mbps</div>
+                <div class="benefit-description">
+                    Download games, movies and enormous files 
+                    without staring at a progress bar.
+                </div>
+            </div>
+            
+            <div class="benefit-card scale-in hover-lift">
+                <div class="benefit-number">02</div>
+                <div class="benefit-title">STABILITY</div>
+                <div class="benefit-value">99.99%<br>UPTIME</div>
+                <div class="benefit-description">
+                    Because disconnecting in the middle of ranked 
+                    is not a networking problem. It's a crime.
+                </div>
+            </div>
+            
+            <div class="benefit-card scale-in hover-lift">
+                <div class="benefit-number">03</div>
+                <div class="benefit-title">LOW LATENCY</div>
+                <div class="benefit-value">4 ms</div>
+                <div class="benefit-description">
+                    Your inputs should reach the server 
+                    before your rage does.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interactive-section">
+        <div class="interactive-container">
+            <h2 class="interactive-title fade-in">
+                <span>WHAT DO</span>
+                <span>YOU DO</span>
+                <span>ONLINE?</span>
+            </h2>
+            
+            <div class="interactive-buttons">
+                <button class="activity-btn active" data-activity="gaming">GAMING</button>
+                <button class="activity-btn" data-activity="streaming">STREAMING</button>
+                <button class="activity-btn" data-activity="work">WORK</button>
+                <button class="activity-btn" data-activity="everyday">EVERYDAY</button>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-card active" data-content="gaming">
+                    <h3 class="activity-card-title">GAMING</h3>
+                    <div class="activity-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">1000 Mbps</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4 ms</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">0.00% packet loss</div>
+                        </div>
+                    </div>
+                    <div class="activity-description">
+                        <p class="desc-title">Perfect for:</p>
+                        <p>Minecraft</p>
+                        <p>Valorant</p>
+                        <p>CS</p>
+                        <p>Fortnite</p>
+                    </div>
+                    <button class="activity-cta">GET GAMER PLAN →</button>
+                </div>
+                
+                <div class="activity-card" data-content="streaming">
+                    <h3 class="activity-card-title">STREAMING</h3>
+                    <div class="activity-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">1000 Mbps</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">High upload speed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4K streaming</div>
+                        </div>
+                    </div>
+                    <div class="activity-description">
+                        <p class="desc-title">Perfect for:</p>
+                        <p>Twitch</p>
+                        <p>YouTube</p>
+                        <p>Netflix</p>
+                        <p>Discord</p>
+                    </div>
+                    <button class="activity-cta">GET STREAM PLAN →</button>
+                </div>
+                
+                <div class="activity-card" data-content="work">
+                    <h3 class="activity-card-title">WORK</h3>
+                    <div class="activity-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">Stable connection</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Low latency</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Fast uploads</div>
+                        </div>
+                    </div>
+                    <div class="activity-description">
+                        <p class="desc-title">Perfect for:</p>
+                        <p>Zoom</p>
+                        <p>GitHub</p>
+                        <p>Figma</p>
+                        <p>Cloud</p>
+                    </div>
+                    <button class="activity-cta">GET WORK PLAN →</button>
+                </div>
+                
+                <div class="activity-card" data-content="everyday">
+                    <h3 class="activity-card-title">EVERYDAY</h3>
+                    <div class="activity-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">500 Mbps</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Unlimited data</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Wi-Fi included</div>
+                        </div>
+                    </div>
+                    <div class="activity-description">
+                        <p class="desc-title">Perfect for:</p>
+                        <p>Browsing</p>
+                        <p>Social media</p>
+                        <p>YouTube</p>
+                        <p>Everything else</p>
+                    </div>
+                    <button class="activity-cta">GET EVERYDAY PLAN →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="network-section">
+        <div class="network-container">
+            <h2 class="network-title fade-in">
+                <span>INSIDE</span>
+                <span>THE NETWORK</span>
+            </h2>
+            
+            <div class="network-map">
+                <svg class="network-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                    <line class="network-line" x1="150" y1="250" x2="300" y2="150" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="300" y1="150" x2="450" y2="200" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="450" y1="200" x2="600" y2="180" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="150" y1="250" x2="300" y2="350" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="300" y1="350" x2="450" y2="200" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="300" y1="350" x2="450" y2="380" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    <line class="network-line" x1="450" y1="380" x2="600" y2="320" stroke="#B6FF00" stroke-width="2" opacity="0.3"/>
+                    
+                    <g class="network-node" data-city="Frankfurt" data-ping="8" data-traffic="12.4">
+                        <circle cx="150" cy="250" r="8" fill="#B6FF00"/>
+                        <circle cx="150" cy="250" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="150" y="230" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">FRANKFURT</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Berlin" data-ping="6" data-traffic="15.2">
+                        <circle cx="300" cy="150" r="8" fill="#B6FF00"/>
+                        <circle cx="300" cy="150" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="300" y="130" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">BERLIN</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Leipzig" data-ping="7" data-traffic="9.8">
+                        <circle cx="450" cy="200" r="8" fill="#B6FF00"/>
+                        <circle cx="450" cy="200" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="450" y="180" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">LEIPZIG</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Dresden" data-ping="9" data-traffic="7.3">
+                        <circle cx="600" cy="180" r="8" fill="#B6FF00"/>
+                        <circle cx="600" cy="180" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="600" y="160" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">DRESDEN</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Munich" data-ping="10" data-traffic="11.6">
+                        <circle cx="300" cy="350" r="8" fill="#B6FF00"/>
+                        <circle cx="300" cy="350" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="300" y="380" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">MUNICH</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Stuttgart" data-ping="8" data-traffic="8.9">
+                        <circle cx="450" cy="380" r="8" fill="#B6FF00"/>
+                        <circle cx="450" cy="380" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="450" y="410" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">STUTTGART</text>
+                    </g>
+                    
+                    <g class="network-node" data-city="Nuremberg" data-ping="9" data-traffic="6.7">
+                        <circle cx="600" cy="320" r="8" fill="#B6FF00"/>
+                        <circle cx="600" cy="320" r="20" fill="none" stroke="#B6FF00" stroke-width="2" opacity="0.3" class="node-pulse"/>
+                        <text x="600" y="350" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="600">NUREMBERG</text>
+                    </g>
+                    
+                    <circle class="data-packet" r="4" fill="#B6FF00">
+                        <animateMotion dur="4s" repeatCount="indefinite">
+                            <mpath href="#path1"/>
+                        </animateMotion>
+                    </circle>
+                    <circle class="data-packet" r="4" fill="#B6FF00">
+                        <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
+                            <mpath href="#path2"/>
+                        </animateMotion>
+                    </circle>
+                    <circle class="data-packet" r="4" fill="#B6FF00">
+                        <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
+                            <mpath href="#path3"/>
+                        </animateMotion>
+                    </circle>
+                    
+                    <defs>
+                        <path id="path1" d="M 150 250 L 300 150 L 450 200 L 600 180"/>
+                        <path id="path2" d="M 150 250 L 300 350 L 450 380 L 600 320"/>
+                        <path id="path3" d="M 300 150 L 450 200 L 300 350"/>
+                    </defs>
+                </svg>
+                
+                <div class="node-tooltip">
+                    <div class="tooltip-city"></div>
+                    <div class="tooltip-ping"></div>
+                    <div class="tooltip-status">ACTIVE</div>
+                    <div class="tooltip-traffic"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="live-section">
+        <div class="live-container">
+            <h2 class="live-title fade-in">RIGHT NOW.</h2>
+            
+            <div class="live-stats">
+                <div class="live-stat scale-in">
+                    <div class="stat-number" data-target="12842">0</div>
+                    <div class="stat-label">PEOPLE ONLINE</div>
+                </div>
+                
+                <div class="live-stat scale-in">
+                    <div class="stat-number" data-target="1.84">0</div>
+                    <div class="stat-unit">Tbps</div>
+                    <div class="stat-label">NETWORK TRAFFIC</div>
+                </div>
+                
+                <div class="live-stat scale-in">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-unit">ms</div>
+                    <div class="stat-label">AVG. LATENCY</div>
+                </div>
+                
+                <div class="live-stat scale-in">
+                    <div class="stat-number" data-target="99.99">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">UPTIME</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="plans">
+        <div class="pricing-container">
+            <h2 class="pricing-title fade-in">
+                <span>PICK</span>
+                <span>YOUR SPEED.</span>
+            </h2>
+            
+            <div class="pricing-toggle">
+                <button class="toggle-btn active" data-period="monthly">MONTHLY</button>
+                <button class="toggle-btn" data-period="yearly">YEARLY</button>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card scale-in hover-lift" data-plan="START" data-speed="300" data-monthly="19" data-yearly="15">
+                    <div class="plan-header">
+                        <div class="plan-name">START</div>
+                        <div class="plan-number">01</div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-monthly="19" data-yearly="15">€19</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">300 Mbps</div>
+                        <div class="feature">Unlimited data</div>
+                        <div class="feature">Wi-Fi 6</div>
+                        <div class="feature">24/7 support</div>
+                    </div>
+                    <button class="plan-btn">CHOOSE START</button>
+                </div>
+                
+                <div class="pricing-card featured scale-in hover-lift" data-plan="BOOST" data-speed="700" data-monthly="29" data-yearly="23">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="plan-header">
+                        <div class="plan-name">BOOST</div>
+                        <div class="plan-number">02</div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-monthly="29" data-yearly="23">€29</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">700 Mbps</div>
+                        <div class="feature">Unlimited data</div>
+                        <div class="feature">Wi-Fi 6</div>
+                        <div class="feature">Priority support</div>
+                    </div>
+                    <button class="plan-btn">CHOOSE BOOST</button>
+                </div>
+                
+                <div class="pricing-card scale-in hover-lift" data-plan="ULTRA" data-speed="1000" data-monthly="39" data-yearly="31">
+                    <div class="plan-header">
+                        <div class="plan-name">ULTRA</div>
+                        <div class="plan-number">03</div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-amount" data-monthly="39" data-yearly="31">€39</span>
+                        <span class="price-period">/ month</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">1000 Mbps</div>
+                        <div class="feature">Unlimited data</div>
+                        <div class="feature">Wi-Fi 7</div>
+                        <div class="feature">Priority support</div>
+                    </div>
+                    <button class="plan-btn">CHOOSE ULTRA</button>
+                </div>
+            </div>
+            
+            <div class="yearly-savings">SAVE 20%</div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-title fade-in">
+                <span>THEY</span>
+                <span>SWITCHED.</span>
+            </h2>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-name">MAX</div>
+                        <div class="testimonial-location">Berlin</div>
+                        <div class="testimonial-text">
+                            "My download finished before I had 
+                            time to make coffee."
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-name">JULIA</div>
+                        <div class="testimonial-location">Hamburg</div>
+                        <div class="testimonial-text">
+                            "Finally, Zoom doesn't destroy 
+                            my gaming ping."
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-name">LEON</div>
+                        <div class="testimonial-location">Munich</div>
+                        <div class="testimonial-text">
+                            "I didn't know internet could 
+                            feel this fast."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev">←</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn next">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="faq-title fade-in">
+                <span>GOT</span>
+                <span>QUESTIONS?</span>
+            </h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is Wi-Fi 7?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Wi-Fi 7 is the latest wireless standard offering speeds up to 46 Gbps, 
+                        lower latency, and better performance in crowded networks. It's perfect 
+                        for gaming, 4K/8K streaming, and smart home devices.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How fast is installation?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Professional installation takes 1-2 hours. We'll schedule a time that works 
+                        for you, usually within 3-5 business days. Self-installation kits ship within 
+                        24 hours and take about 30 minutes to set up.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I cancel anytime?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. There are no long-term contracts. You can cancel anytime with 30 days 
+                        notice. If you're on a yearly plan, you'll receive a prorated refund for 
+                        unused months.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide the router?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. All plans include a high-performance Wi-Fi router at no extra cost. 
+                        START and BOOST plans come with Wi-Fi 6 routers, while ULTRA includes our 
+                        latest Wi-Fi 7 router.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-cta">
+                <h2 class="footer-title fade-in">READY?</h2>
+                <button class="footer-btn">GET CONNECTED →</button>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">NEONET</div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">X</a>
+                        <a href="#" class="footer-link">YouTube</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <a href="#support" class="footer-link">Support</a>
+                        <a href="#" class="footer-link">Privacy</a>
+                        <a href="#" class="footer-link">Terms</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 NEONET by slm</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/speedTest.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/orderForm.js"></script>
+
+    
+</body>
+</html>
