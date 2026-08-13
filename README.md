@@ -2,6 +2,8 @@
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-black?style=for-the-badge)](https://slimgt-ui.github.io/neonet/)
 [![GitHub](https://img.shields.io/badge/GitHub-slimGT--ui-181717?style=for-the-badge&logo=github)](https://github.com/slimGT-ui/neonet)
+
+
 [🚀 Открыть сайт](https://slimgt-ui.github.io/neonet/)
 
 
